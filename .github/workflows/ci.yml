@@ -31,15 +31,15 @@ jobs:
         cd react-test
         npm ci
     - name: Build the app
-    - run:
+    - run: |
         cd react-test
         npm run build
     - name: React test
-    - run:
+    - run: |
         cd react-test
         npm test
     - name: Start the app
-    - run:
+    - run: |
         cd react-test
         npm start &
         npx wait-on --timeout 60000
