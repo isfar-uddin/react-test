@@ -27,20 +27,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
-      run: |
-        cd react-test
-        npm ci
+      run: npm ci
     - name: Build the app
-      run: |
-        cd react-test
-        npm run build
+      run: npm run build
     - name: React test
-      run: |
-        cd react-test
-        npm test
+      run: npm test
     - name: Start the app
-      run: |
-        cd react-test
-        npm start &
+      run: npm start &
         npx wait-on --timeout 60000
     
