@@ -30,7 +30,7 @@ jobs:
       run: npm ci
     - name: Build the app
       run: npm run build
-    - name: React test
+    - name: Run component tests
       run: npm test
     - name: Start the app
       run: npm start &
